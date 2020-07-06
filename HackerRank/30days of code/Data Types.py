@@ -1,4 +1,7 @@
 
+i = 4
+d = 4.0
+s = 'HackerRank '
 import sys
 addedint = int(sys.stdin.readline())
 addedouble = float(sys.stdin.readline())
