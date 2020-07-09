@@ -1,0 +1,2 @@
+resultlist = [[a,b,c,d,e,f,g,h,i] for a in range(1,10) for b in range(1,10) for c in range(1,10)        for d in range(1,10) for e in range(1,10) for f in range(1,10) for g in range(1,10) for h in range      (1,10) for i in range(1,10) if a+b+c==15 and d+e+f==15 and g+h+i==15 and a+d+g==15 and b+e+h==15        and c+f+i==15 and a+e+i==15 and c+e+g==15 and len(set([a,b,c,d,e,f,g,h,i]))==9]
+print(resultlist)
