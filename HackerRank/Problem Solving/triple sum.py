@@ -10,15 +10,35 @@ from collections import defaultdict
 
 # Complete the triplets function below.
 def triplets(a, b, c):
-    count=0
-    mydict = defaultdict(int)
-    for r in itertools.product(a,b,c):
-        if r[1]>=r[0] and r[1]>=r[2]:
-            if r not in mydict:
-                mydict[r]+=1
-                count+=1
-                #print(r)
-    print(mydict)
+    # count=0
+    # mydict = defaultdict(int)
+    # for r in itertools.product(a,b,c):
+    #     if r[1]>=r[0] and r[1]>=r[2]:
+    #         if r not in mydict:
+    #             mydict[r]+=1
+    #             count+=1
+    #             #print(r)
+    # print(mydict)
+    count = 0
+    mydictA = defaultdict(int)
+    mydictC = defaultdict(int)
+    mydictB = defaultdict(int)
+    for h in b:
+        mydictB[h]+=1
+    for i in a:
+        mydictA[i]+=1
+    for j in c:
+        mydictC[j]+=1
+    for k in mydictB:
+        countA=0;countC=0
+        for x in mydictA:
+            if x<=k:
+                countA+=1
+        for y in mydictC:
+            if y<=k:
+                countC+=1
+        print(countA,countC)
+        count+=countA*countC
     return count
 
 if __name__ == '__main__':
@@ -43,4 +63,3 @@ if __name__ == '__main__':
     fptr.write(str(ans) + '\n')
 
     fptr.close()
-
