@@ -13,11 +13,9 @@ def myfun(a,b,c):
         mycost = min(mycost,temp)
     dp[a]=mycost
     return mycost
-
-
 N = 280002
 dp = [0]*N    
-mylist1 = list(map(int,input).split())
+mylist1 = list(map(int,input().split()))
 mylist2 = list(map(int,input().split()))
 n = int(input())
 array = [0]*(7*n+2)
