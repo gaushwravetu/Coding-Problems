@@ -18,9 +18,16 @@ class GoldInvoice:
         #result = round(item_cost,3)
         return item_cost
     def cal_Item_price_inGST(self,glist,itemchoice):
-        result = self.calc_Item_price_exGST(glist,itemchoice)
-        result+=result*0.03
-        return result
+        item_cost = 0
+        for i in glist:
+            if(i.item_id==itemchoice):
+                itemcost = i.item_qty*i.item_rate*i.item_weight
+                pwc = itemcost*(i.item_pwc/100)
+                pdis = itemcost*(i.item_pdis/100)
+                item_cost+=itemcost+pwc-pdis
+        gst = item_cost*0.003
+        item_cost+=gst
+        return item_cost
 if __name__=="__main__":
     n = int(input())
     mylist = []
@@ -34,7 +41,7 @@ if __name__=="__main__":
         ipdis = float(input())
         mylist.append(GoldInvoice(iid,iname,iqty,irate,iweight,ipwc,ipdis))
     reqitemid = int(input())
-    obj = GoldInvoice(0,0,0,0,0,0,0)
+    obj = GoldInvoice(0,"",0,0,0,0,0)
     result1 = obj.cal_Item_price_inGST(mylist,reqitemid)
     result2 = obj.calc_Item_price_exGST(mylist,reqitemid)
     print(round(result1,2))

@@ -21,7 +21,7 @@
 #         continue
 #     print(e)
 
-a = [5,22,30,17,18,10]
-m = filter(lambda x:x>=18,a)
-for x in m:
-    print(x)
+# a = [5,22,30,17,18,10]
+# m = filter(lambda x:x>=18,a)
+# for x in m:
+#     print(x)
