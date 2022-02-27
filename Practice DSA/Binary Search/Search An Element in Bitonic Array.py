@@ -43,10 +43,10 @@ key = int(input("Enter the key : "))
 peak = cal_peak(arr,0,len(arr)-1)
 find1 = bin_search(arr,0,peak,key)
 if find1!=-1:
-    print("Key is present at index : {}".format(find1))
+    print("Key present at index : {}".format(find1))
 else:
     find2 = revbin_search(arr,peak,len(arr)-1,key)
     if find2!=-1:
-        print("Key is present at index : {}".format(find2))
+        print("Key present at index : {}".format(find2))
     else:
-        print("Key is not present")
+        print("Key not present")
