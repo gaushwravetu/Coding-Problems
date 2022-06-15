@@ -20,8 +20,6 @@ def NGR(l,s):
         # print(s,resultStack)
     # print(resultStack)
     return resultStack
-
-
 mystack = []
 mylist = list(map(int,input().split()))
 result = NGR(mylist,mystack)
