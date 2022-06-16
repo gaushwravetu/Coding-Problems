@@ -9,7 +9,7 @@ def knapsack(w,v,wt,n,dp):
                 dp[i][j] = max(v[i-1]+dp[i-1][j-w[i-1]],dp[i-1][i])
             elif w[i-1]>j:
                 dp[i][j] = dp[i-1][j]
-    print(dp)
+    # print(dp)
     return dp[n][wt]+1
 
 weightlist = list(map(int,input().split()))
