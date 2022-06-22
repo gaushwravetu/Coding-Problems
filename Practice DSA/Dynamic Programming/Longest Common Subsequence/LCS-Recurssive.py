@@ -6,7 +6,6 @@ def LCS_Recurssive(s,t,sl,tl):
     else:
         return max(LCS_Recurssive(s,t,sl-1,tl),LCS_Recurssive(s,t,sl,tl-1))
 
-
 sourceString = input()
 targetString = input()
 slen = len(sourceString)
