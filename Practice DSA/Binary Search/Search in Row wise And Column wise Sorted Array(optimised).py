@@ -1,6 +1,8 @@
 def bin_search(mat,start,end,key):
     res = -1
-    while start<=end:
+    n = len(mat)
+    m = len(mat[0])
+    while(start>=0 and start<n and end>=0 and end<m):
         # print(start,end)
         if mat[start][end]==key:
             return (start,end)
@@ -17,7 +19,7 @@ for i in range(size):
     mat.append(arr)
 # print(mat)
 key = int(input("Enter the key : "))
-res = bin_search(mat,0,size-1,key)
+res = bin_search(mat,0,len(mat[0])-1,key)
 # print(res)
 
 if res!=-1:

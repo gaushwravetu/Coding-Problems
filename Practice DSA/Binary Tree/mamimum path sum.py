@@ -7,9 +7,9 @@ def maxpathsum(root,maxi):
 
     if root==None:
         return 0
-    lh = (maxpathsum(root.left,maxi))
-    rh = (maxpathsum(root.right,maxi))
-
+    lh = max(0,maxpathsum(root.left,maxi))
+    rh = max(0,maxpathsum(root.right,maxi))
+    print(lh,rh)
     maxi = max(maxi,lh+rh+root.val)
     result = max(lh+rh)+root.val
     return result
