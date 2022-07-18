@@ -8,3 +8,5 @@ class Solution:
                 return i
             left+=nums[i]
         return -1
+
+# print(~~~2017+1)
